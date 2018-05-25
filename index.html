@@ -5,6 +5,7 @@
     <head>
         <meta charset="utf-8" /> 
         <meta content="width=device-width, user-scalable=no" name="viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- add something here -->
         <meta property="og:image" content="" />
         <title>Ocean Grove Villas</title>
@@ -39,20 +40,16 @@
                 </div>
                 <div class="navbar-collapse collapse pull-right">
                     <ul class="nav navbar-nav">
-                        <li ng-class="{active: isActive('/villas')}" class="dropdown">
-                            <a href="#villas" class="dropdown-toggle" data-toggle="dropdown">Villas</a>
+                        <li ng-class="{active: isActive('/villas')}"><a href="#villas">Villas</a></li>
+                        <li ng-class="{active: isActive('/gallery')}" class="dropdown">
+                            <a href="#gallery" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
                             <ul class="dropdown-menu" style="background-color: dimgray">
-                                <li><a href="#villas/onebedroom">One Bedroom Luxury Villa</a></li>
-                                <li><a href="#villas/onebedroomspa">One Bedroom Luxury Villa with Spa</a></li>
-                                <li><a href="#villas/twobedroom">Two Bedroom Luxury Villa</a></li>
-                                <li><a href="#villas/twobedroomocean">Two Bedroom With Ocean View</a></li>
+                                <li><a href="#gallery/villas">Villas</a></li>
+                                <li><a href="#gallery/property">Property</a></li>
+                                <li><a href="#gallery/beaches">Beaches</a></li>
                             </ul>
                         </li>
-                        <li ng-class="{active: isActive('/gallery')}"><a href="#gallery">Gallery</a></li>
-                        <li ng-class="{active: isActive('/rates')}"><a href="#rates">Rates</a></li>
-                        <li ng-class="{active: isActive('/booking')}"><a href="#booking">Bookings</a></li>
                         <li ng-class="{active: isActive('/contact')}"><a href="#contact">Contact Us</a></li>
-                        <li><a href="https://apac.littlehotelier.com/properties/intercottagesdirect" target="_blank"><div class="btn" style="background-color: dimgray; color: white;">Book Now</div></a></li>
                     </ul>
                 </div>
             </div>
@@ -60,8 +57,22 @@
 
         <div data-ng-view></div>
         
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>103 Forster Drive, Bawley Point NSW 2539</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="text-align: center">
+                            <p>&copy; 2017 Ocean Grove Villas
+                - All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
         
-
         <script src="lib/jquery-1.12.0.min.js"></script>
         <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBmPCFkBHV30QsL2SklJDJCvulJs235rHs'></script>
         <script src="lib/bootstrap.min.js"></script>
@@ -76,16 +87,17 @@
         <script src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=815&amp;locationId=1775027&amp;lang=en_AU&amp;display_version=2"></script>
         -->
         <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73453339-5"></script>
         <script>
-        /*
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
 
-          ga('create', 'UA-73453339-4', 'auto');
-          ga('send', 'pageview');
-        */    
+          gtag('config', 'UA-73453339-5');
+        </script>
+
+        <script>
+         
             
             
         $(document).ready(function () {

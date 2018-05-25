@@ -1,21 +1,14 @@
 <section>
-    <!-- Hero Image -->
-    <div class="jumbotron vertical-center hero-banner" style="background: url(img/bookingbanner.jpg) no-repeat; background-size: cover;"> 
-        <!--
-        <img src="img/contact2.jpg" class="img-responsive" style="margin-top: 40px;" width="100%">
-        -->
-        <div class="container" style="color: white; text-shadow: 1px 1px 2px black;">
-             <div class="caption-wrapper">
-                    <div class="section-heading4">AVAILABILITY & BOOKINGS
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <img src="img/bookingbanner.jpg" class="img-responsive" style="margin-top: 40px; width: 100%">
     <div class="container" style="padding-top: 50px;">
-        <div class="frame-div" style="margin-top: 50px;">
-            <iframe ng-src="https://apac.littlehotelier.com/properties/intercottagesdirect/widget?number_of_days=30" id="frame" frameBorder="0" allowtransparency="true"></iframe>
+        <!-- May use jumbotron for heading -->
+        <h2 style="font-family: 'Marcellus', san-serif;">AVAILABILITY & BOOKINGS</h2>
+        
+        <!-- Booking frame -->
+        <div id="frame" class="frame-div" style="margin-top: 50px;">
+            <iframe ng-src="https://apac.littlehotelier.com/properties/intercottagesdirect/widget?number_of_days=30" id="frame" frameBorder="0" allowtransparency="true" onload="resizeIframe(this)"></iframe>
         </div>
+        
         <div class="line-separator"></div>
         
         <h3 style="font-family: 'Marcellus', serif;">TERMS AND CONDITIONS</h3>
@@ -74,21 +67,6 @@ Only the guests nominated and agreed in the Booking may stay in the Property ove
     </div>
 </section>
 
-<section id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p>103 Forster Drive, Bawley Point NSW 2539</p>
-            </div>
-            <div class="col-md-6">
-                <div style="text-align: center">
-                    <p>&copy; 2017 Ocean Grove Villas
-        - All Rights Reserved</p>
-                </div>
-            </div>
-        </div>        
-    </div>
-</section>
 <script>
     $("iframe").load(function(){
         $(this).css("height", "800px");
